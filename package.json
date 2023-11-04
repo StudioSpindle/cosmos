@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "ts-node -r dotenv/config index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2",
+    "weaviate-ts-client": "^1.6.0"
+  }
+}
