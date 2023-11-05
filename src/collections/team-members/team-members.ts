@@ -1,9 +1,10 @@
 
-export const team = {
-  "class": "Team",
-  "vectorizer": "text2vec-cohere",
+export const teamMember = {
+  "class": "TeamMember",
+  "vectorizer": "text2vec-openai",
   "moduleConfig": {
-    "generative-openai": {}
+    "text2vec-openai": {},
+    "generative-openai": {},
   },
   "properties": [
     {
