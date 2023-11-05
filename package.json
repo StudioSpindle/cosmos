@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "ts-node -r dotenv/config index.ts"
+    "start": "ts-node -r dotenv/config src/index.ts"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",

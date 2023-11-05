@@ -1,3 +1,10 @@
+
+> Note: This would be the unstructured data.
+>       We should find a way to structure this data into the 'teams.json' file.
+>       Perhaps a tool such as 'https://unstructured-io.github.io/unstructured/index.html' can do this?
+> 
+>       For this example structured it via a prompt in ChatGPT.
+
 # Team Dynamics: A Glimpse into Three Exceptional Teams
 
 ## Team A: The Innovation Catalysts
