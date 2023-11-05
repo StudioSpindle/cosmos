@@ -4,7 +4,7 @@ export const teamMember = {
   "vectorizer": "text2vec-openai",
   "moduleConfig": {
     "text2vec-openai": {},
-    "generative-openai": {},
+    "generative-cohere": {},
   },
   "properties": [
     {
