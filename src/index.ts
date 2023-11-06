@@ -3,10 +3,11 @@ import {errorHandler} from "./utils/error-handler";
 import {question} from "./client/functions/question";
 import {Collections} from "./collections/collections.enum";
 
-// import { addClassToSchema } from "./schema-modifiers/add-class-to-schema";
-// import { removeClassFromSchema } from "./schema-modifiers/remove-class-from-schema";
-// import {teamMembersImport} from "./collections/team-members/team-members-import";
-// import {getObjects} from "./client/introspection/get-objects";
+import { addClassToSchema } from "./schema-modifiers/add-class-to-schema";
+import { removeClassFromSchema } from "./schema-modifiers/remove-class-from-schema";
+import {teamMembersImport} from "./collections/team-members/team-members-import";
+import {getObjects} from "./client/introspection/get-objects";
+import {teamMember} from "./collections/team-members/team-members";
 
 /**
  * 1. Add class to schema
@@ -14,25 +15,25 @@ import {Collections} from "./collections/collections.enum";
 
 // addClassToSchema(teamMember).then().catch(errorHandler);
 
-// Optionally remove classes
-//
-// removeClassFromSchema('Team').then().catch(errorHandler);
-
 /**
  * 2. Import data into Weaviate
  */
 
-//
 // teamMembersImport().then(logResult).catch(errorHandler);
-//
-// getObjects().then((weaviateObjectsList) => {
-//   console.log('weaviateObjectsList: ', weaviateObjectsList);
-// });
+
+// Optionally remove classes (and data)
+// removeClassFromSchema(Collections.TeamMember).then().catch(errorHandler);
 
 /**
  * 3. Ask questions
  */
 
-// TODO: implement https://weaviate.io/developers/weaviate/modules/reader-generator-modules/qna-transformers
-question(Collections.TeamMember, 'Who has the hobby to paint?').then(logResult).catch(errorHandler);
+question(Collections.TeamMember, 'Who has painting as a hobby?').then(logResult).catch(errorHandler);
 
+/**
+ * Introspection
+ */
+
+// getObjects().then((weaviateObjectsList) => {
+//   console.log('weaviateObjectsList: ', weaviateObjectsList);
+// });

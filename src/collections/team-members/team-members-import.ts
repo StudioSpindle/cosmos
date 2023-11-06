@@ -21,19 +21,19 @@ export async function teamMembersImport() {
     }));
 
     batcher.withObjects(...memberObjects);
-
-    await batcher.do().then((batchResponse) => {
-      batchResponse.map((weaviateObjectsGet) => {
-
-        if (weaviateObjectsGet.result.status === 'FAILED') {
-          console.log(weaviateObjectsGet.result.errors);
-          return;
-        }
-
-        if (weaviateObjectsGet.result.status === 'SUCCESS') {
-          console.log(`added teamMember ${weaviateObjectsGet.properties.memberName} to ${weaviateObjectsGet.class}`)
-        }
-      });
-    });
   }
+
+  await batcher.do().then((batchResponse) => {
+    batchResponse.map((weaviateObjectsGet) => {
+
+      if (weaviateObjectsGet.result.status === 'FAILED') {
+        console.log(weaviateObjectsGet.result.errors);
+        return;
+      }
+
+      if (weaviateObjectsGet.result.status === 'SUCCESS') {
+        console.log(`added teamMember ${weaviateObjectsGet.properties.memberName} to ${weaviateObjectsGet.class}`)
+      }
+    });
+  });
 }

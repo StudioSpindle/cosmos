@@ -4,7 +4,14 @@ export const teamMember = {
   "vectorizer": "text2vec-openai",
   "moduleConfig": {
     "text2vec-openai": {},
-    "generative-cohere": {},
+    "qna-openai": {
+      "model": "text-davinci-002",
+      "maxTokens": 16,
+      "temperature": 0.0,
+      "topP": 1,
+      "frequencyPenalty": 0.0,
+      "presencePenalty": 0.0
+    }
   },
   "properties": [
     {
